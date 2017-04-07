@@ -4,3 +4,6 @@
     
     path = week0_python/python-workshop
 	url = git@REMOTE_URL:https://github.com/MegatronBultema/python-workshop.git
+[submodule "week_1/day5-plotting/pandas-seaborn"]
+	path = week_1/day5-plotting/pandas-seaborn
+	url = https://github.com/MegatronBultema/pandas-seaborn.git
