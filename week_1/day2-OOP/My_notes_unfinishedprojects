@@ -1,0 +1,55 @@
+ What is the difference between an object and a class?
+   class = blueprint
+   object=instance
+• What is the difference between an attribute and a method?
+  attribute is something that belongs to the instance of the class
+  a method is an action that you take on the class
+• What is the syntactic difference between an attribute and a
+method?
+   self.noun -- attribute
+   self.verb() -- method
+• What is the role of self in defining a class?
+  refers to the individual object that you initiate the class
+• What can be used to give a custom class functionality similar
+to other classes?
+   use magic methods to overload
+• How can we see the attributes and methods available on an
+object in IPython?
+   dir or tab complete
+• How do you decide when to use a class or when to use a
+function?
+   when you want to preform the same process on multiple data sets
+
+
+
+
+Afternoon notes:
+Practice using debugger
+if you want to inherit from userdict not dict if you are going to 'overload'
+  (don't know what that means)
+write tests before you write code, Red Green Green
+Explain your problem to a rubber duck . . . or friend
+
+What is the difference between a class and an object?
+• What are the three key components of OOP? How do they
+lead to better code?
+   encapsulation - protects emplimentation, takes away details you don't need to know
+   inheritance - get methods from base class
+   polymorphism - similar interface to work with similar things
+   method passing - ?
+• What is duck typing?
+    if it looks like a duck it is treated like a duck
+
+• What are magic methods?
+  designated by dunder, define in class to allow basic python operations
+• What are the benefits of TDD? What does Red/Green/Green
+mean?
+    Test driven development - software development standards
+   forces you to think before you code, check if it is working correctly
+   just because it runs and doesnt give errors doesn't mean it is working correctly
+
+
+Unfinished:
+warmup python_coin.py need to work on finding change for remainder ..... finished!
+war.py need to start a new game after the first is played
+blackjack.py is kinda a mess. Need to get it running and then clean it up.

@@ -1,0 +1,19 @@
+go in to psql
+init psql
+psql databasename
+\d to see tables
+
+ipython
+import psycopg2
+conn = psycopg2.connect(dbname='election_data',
+                        user='ewellinger', host='localhost')
+
+
+
+when you run a query that changes the local understanding of the database
+before you commit the change and that enviroment will think that change has occured
+ BUT that is not the case in the actual database
+
+ keep getting errors until you roll back the connection
+ conn.rollback()
+ cur.conn.cursor()
