@@ -1,3 +1,6 @@
 [submodule "week0_python/python-workshop"]
-	path = week0_python/python-workshop
-	url = git@REMOTE_URL:https://github.com/MegatronBultema/python-intro.git
+	path = /Users/DataScience/Documents/GDS_WeeklyNotes/week_1/day2-OOP/OOP
+    url= git@https://github.com/MegatronBultema/OOP.git
+    
+    path = week0_python/python-workshop
+	url = git@REMOTE_URL:https://github.com/MegatronBultema/python-workshop.git
