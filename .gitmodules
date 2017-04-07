@@ -1,0 +1,3 @@
+[submodule "week0_python/python-workshop"]
+	path = week0_python/python-workshop
+	url = git@REMOTE_URL:https://github.com/MegatronBultema/python-intro.git
