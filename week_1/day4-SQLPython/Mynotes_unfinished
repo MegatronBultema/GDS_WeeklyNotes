@@ -17,3 +17,12 @@ before you commit the change and that enviroment will think that change has occu
  keep getting errors until you roll back the connection
  conn.rollback()
  cur.conn.cursor()
+
+
+Pandas
+inplace=true changes the table
+inplace= defalut false outputs the result but doesn't change the data
+
+stay away from .column notation because error if value occurs in atributes
+
+first step clean up columns by replacing ' ' with _
