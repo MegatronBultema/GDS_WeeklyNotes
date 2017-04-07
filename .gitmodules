@@ -1,5 +1,5 @@
 [submodule "week0_python/python-workshop"]
-	path = /Users/DataScience/Documents/GDS_WeeklyNotes/week_1/day2-OOP/OOP
+	path = /Users/DataScience/Documents/GDS_WeeklyNotes/week_1/day2-OOP/
     url= https://github.com/MegatronBultema/OOP.git
     
     path = week0_python/python-workshop
