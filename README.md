@@ -3,9 +3,13 @@ Notes and exercises from weekly exercises. Pan to summarize weekly into the GDS_
 
 Week 1:
   Day1 - Python
+  
   Day2 - Object Oriented Programming
+  
   Day3 - SQL
+  
   Day4 - Psycopg2 (SQL in python) and Pandas
+  
   Day5 - MatPlotLib
 Week 2:
 
