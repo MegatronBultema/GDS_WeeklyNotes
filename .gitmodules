@@ -13,3 +13,6 @@
 [submodule "week_1/day4-SQLPython/pandas"]
 	path = week_1/day4-SQLPython/pandas
 	url = https://github.com/MegatronBultema/pandas.git
+[submodule "week_1/day5-plotting/--name"]
+	path = week_1/day5-plotting/--name
+	url = https://github.com/MegatronBultema/pandas-seaborn.git
