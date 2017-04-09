@@ -1,18 +1,15 @@
-[submodule "week_1/day4-SQLPython/sql-python"]
-    path = week_1/day4-SQLPython/sql-python
-    url = https://github.com/MegatronBultema/sql-python.git
-[submodule "pandas-seaborn"]
-    path = week_1/day5-plotting/pandas-seaborn
-    url = https://github.com/MegatronBultema/pandas-seaborn.git
-[submodule "pandas"]
-    path = week_1/day4-SQLPython/pandas
-    url = https://github.com/MegatronBultema/pandas.git
-[submodule "DSI_Lectures"]
-    path = DSI_Lectures
-    url = https://github.com/MegatronBultema/DSI_Lectures.git
 [submodule "week_1/day5-plotting/pandas-seaborn"]
 	path = week_1/day5-plotting/pandas-seaborn
 	url = https://github.com/MegatronBultema/pandas-seaborn.git
 [submodule "week_1/day2-OOP/OOP"]
 	path = week_1/day2-OOP/OOP
 	url = https://github.com/MegatronBultema/OOP.git
+[submodule "week_1/day3-SQL/sql"]
+	path = week_1/day3-SQL/sql
+	url = https://github.com/MegatronBultema/sql.git
+[submodule "week_1/day4-SQLPython/sql-python"]
+	path = week_1/day4-SQLPython/sql-python
+	url = https://github.com/MegatronBultema/sql-python.git
+[submodule "week_1/day4-SQLPython/pandas"]
+	path = week_1/day4-SQLPython/pandas
+	url = https://github.com/MegatronBultema/pandas.git
