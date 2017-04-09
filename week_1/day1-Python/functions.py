@@ -1,3 +1,4 @@
+#written in py2
 from collections import Counter
 from itertools import izip, count
 from StringIO import StringIO
@@ -90,8 +91,13 @@ def merge_dictionaries(d1, d2):
     Create a new dictionary that contains all the key, value pairs from d1 and
     d2. If a key is in both dictionaries, sum the values.
     """
-
-    pass
+    d3=d1
+    for key, value in d2.iteritems():
+        if key in d3:
+            d3[key]=d3[key] + d2[key]
+        else:
+            d3[key]=d2[key]
+    return d3
 
 if __name__ == '__main__':
 
@@ -99,3 +105,6 @@ if __name__ == '__main__':
     f2 = StringIO("rabbit\nhorse\nmouse\n")
     with open('test.txt','w') as out:
         merge_files(f1,f2,out)
+
+    d1, d2 ={"a": 2, "b": 5}, {"a": 7, "c":10}
+    print(merge_dictionaries(d1,d2))
