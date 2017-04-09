@@ -11,6 +11,7 @@ Week 1:
   Day4 - Psycopg2 (SQL in python) and Pandas
   
   Day5 - MatPlotLib
+
 Week 2:
 
 Week 3:
