@@ -13,6 +13,7 @@
 [submodule "week_1/day2-OOP/OOP"]
 	path = week_1/day2-OOP/OOP
     url= https://github.com/MegatronBultema/OOP.git
+	branch = OOP
 [submodule "week_1/day5-plotting/pandas-seaborn"]
 	path = week_1/day5-plotting/pandas-seaborn
 	url = https://github.com/MegatronBultema/pandas-seaborn.git
