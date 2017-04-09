@@ -16,3 +16,6 @@
 [submodule "week_1/day5-plotting/--name"]
 	path = week_1/day5-plotting/--name
 	url = https://github.com/MegatronBultema/pandas-seaborn.git
+[submodule "week_1/day5-plotting/-f"]
+	path = week_1/day5-plotting/-f
+	url = https://github.com/MegatronBultema/pandas-seaborn.git
