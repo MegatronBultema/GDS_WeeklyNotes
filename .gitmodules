@@ -1,3 +1,6 @@
+[submodule "DSI_Lectures"]
+    path = DSI_Lectures
+    url = https://github.com/MegatronBultema/DSI_Lectures.git
 [submodule "week_1/day2-OOP/OOP"]
 	path = week_1/day2-OOP/OOP
     url= https://github.com/MegatronBultema/OOP.git
