@@ -1,0 +1,70 @@
+Why use Pandas to write SQL queries?
+psycopg2
+• Allows for the combination of data sources all in one place
+    you can use Python to pull data from other databases as well
+• Allows for use of all our Python tools when working with the data (dataframes, machine learning models, etc.)
+• Allows for more easy dynamic query generation and hence automations
+
+5 steps in psycopg2
+1. Open a connection
+2. Create a cursor object
+3. Use the cursor to execute SQL queries 4. Commit SQL actions
+5. Close the cursor and connection
+
+There are a number of ways to grab results from the cursor:
+• cur.fetchone() - Returns the next result
+• next(cur) - Returns the next result
+• cur.fetchmany(n) - Returns the next n results
+• cur.fetchall() - Returns all results in the result set
+• for res in cur: - Iterates over all results in the cursor
+
+General process to change the database:
+query = '''ALTER TABLE articles
+           RENAME ted_cruz TO lucifer_in_the_flesh;'''
+cur.execute(query)
+conn.commit()
+conn.rollback()
+
+Don't forget!
+  cur.close()
+  conn.close()
+
+Dynamic Queries
+  The Right Way:
+      The proper way to write a dynamic query is to use the execute method on our cursor object, passing the dynamic part as the second argument
+
+      This ensures that the variables you are inserting are kept as the same variable type. If we tried to perform SQL injection using the execute method, it would look for a name exactly equal to this string rather than potentially executing further commands.
+
+      cur.execute('''SELECT * FROM users WHERE name = %s''', (name_var, ))
+
+I don't understand this....
+
+
+go in to psql
+init psql
+psql databasename
+\d to see tables
+
+ipython
+import psycopg2
+conn = psycopg2.connect(dbname='election_data',
+                        user='ewellinger', host='localhost')
+
+
+
+when you run a query that changes the local understanding of the database
+before you commit the change and that enviroment will think that change has occured
+ BUT that is not the case in the actual database
+
+ keep getting errors until you roll back the connection
+ conn.rollback()
+ cur.conn.cursor()
+
+
+Pandas
+inplace=true changes the table
+inplace= defalut false outputs the result but doesn't change the data
+
+stay away from .column notation because error if value occurs in atributes
+
+first step clean up columns by replacing ' ' with _

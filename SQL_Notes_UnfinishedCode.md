@@ -44,4 +44,3 @@ Check launch that psql is turned on
  REFERENCES student (id) - gives foriegn key
  numeric(3,2) --- 3 numbers 2 decimal
  choice characters over text types
- 

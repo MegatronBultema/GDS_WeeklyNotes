@@ -1,0 +1,105 @@
+ Pandas DataFrames, which are objects that will hold our data, allowing us to interact with it, manipulate it, and eventually throw it into machine learning algorithms (if we want).
+
+ Making df:
+    From data in python
+        Dictionaries
+        pd.DataFrame(list of two dictionaries)
+        pd interprets each dictionary to be a row in the DataFrame.
+        The keys are read as the column names and the values as the values for each column.
+
+        import pandas as pd # I haven't actually done this in code yet.
+        data_lst = [{'a': 1, 'b': 2, 'c':3}, {'a': 4, 'b':5, 'c':6, 'd':7}]
+        df = pd.DataFrame(data_lst)
+        df
+
+        Lists
+        pd.DataFrame(list of lists, columns = list of strings)
+        list of lists as the data argument:  each individual list in the data argument is one row
+        list of strings as the columns argument
+        Will give error if greatest number of elements in any data list does not equal the number of columns provided
+          (at least one list must fill all (and no more) of the columns)
+        If any of the lists has less elements than number of columns will fill in last instance with NaN
+
+    From external data
+        df = pd.read_csv('my_data.csv') - by default takes first row as column names
+        df = pd.read_csv('my_data.csv', header=None, names=['col1', 'col2', ...., 'col12'])  - specifies column names
+
+
+Looking at df:
+    df.head() # Gives first 5 rows (n=number of rows)
+    df.tail() # Gives last 5 rows (n=number of rows)
+    df.describe() # Gives you summary statistics for all of your numeric columns.
+    df.shape # Gives you the number of rows and number of columns
+    df.columns # Gives you back a list of all of the column names.
+    df.info() # Allows you to look at the data type for each column, and the number of null values.
+
+Getting data
+  Get Columns
+    df['column name']
+    df[['column name', 'column name']]
+  Get Rows
+    df[0:3] - get rows 0, 1, & 2
+
+  Get specific row(s) and column(s)
+    df.loc[] is a purely label-location based indexer
+    df.iloc[] is a purely integer-location based indexer
+    ix[] is a primarily label-location based indexer that falls back to integer indexing .... but not advized because being depreciated
+
+
+  Masks
+    df['chlorides'] <= 0.08
+    # This just gives us a mask - tells us True or False whether each row fit's the condition.
+
+    # To use a mask, we actually have to use it to index into the DataFrame (using square brackets).
+      df[df['chlorides'] <= 0.08]
+
+    # two or more masks combined with &
+    Okay, this is cool. What if I wanted a slightly more complicated query...
+      df[(df['chlorides'] >= 0.04) & (df['chlorides'] < 0.08)]
+
+  Query
+      # Or I could use the query() method that is available on our dataframe object.
+    df.query('chlorides >= 0.04 and chlorides <= 0.08 and pH > 3.5 and pH < 4.00')
+
+  Unique
+  # Quality looks like something we might want to group by. Let's check it out in a little  more detail first, though.
+    df['quality'].unique()
+
+  GroupBy
+    We have tons of aggregation metrics we can get from a groupby object. Note here that we store the results of a groupby below to then perform all kinds of operations on it (this is actually the preferred method if we're going to perform more than one calculation on it). We have tons of operations we can perform on it.
+    groupby_obj = df.groupby('quality')
+    groupby_obj.mean()
+    groupby_obj.max()
+    groupby_obj.count()
+
+    groupby_obj.mean()['column name'] - selects to show one column means
+
+
+Creating and Dropping Columns
+    Creating columns is done in one of two ways:
+    1. Using bracket notation
+    2. Using the `eval()` method on the Pandas DataFrame (occurs `inplace` by default).
+    3. Using the `assign()` method on the Pandas DataFrame (have to specify `inplace`, otherwise it returns a copy of the DataFrame).
+
+    Dropping columns is done using the `df.drop()` method on the Pandas DataFrame. When dropping columns, we have to be careful to make sure to tell the DataFrame to drop them in place, or assign the DataFrame with dropped columns to a new variable. You also need to make sure to tell the `drop()` method what axis the thing you're trying to drop is on (rows are `axis=0`, and columns are `axis=1`).
+
+Combining Datasets with Pandas
+    pd.merge(), df.join(), df.merge(), pd.concat()
+    Pandas functions that allow us to combine two sets of data include the use of pd.merge(), df.join(), df.merge(), and pd.concat(). For the most part, these do largely the same things (although you'll notice the slight syntax difference with merge() and concat() being able to be called via the Pandas module and merge() and join() being able to be called on a DataFrame instance). There are some cases where one of these might be better than another in terms of writing less code or performing some kind of data combination in an easier way. The major differences between these, though, largely depend on what they do by default when you try to combine different data. By default, merge() looks to join on common columns, join() on common indices, and concat() by just appending on a given axis.
+    You can find more detail about the differences between all three of these in the docs. We'll look at some examples below.
+
+  Sorting
+    df.sort_values('quality', ascending=False)
+
+
+Data clean up
+  removing spaces from column names
+    df2 = df.copy()
+    cols = df2.columns.tolist()
+    cols = [col.replace(' ', '_') for col in cols]
+    df2.columns = cols
+    df2.head()
+
+  renaming a column name
+    # Rename an individual column in the original data frame.
+    df.rename(columns={'fixed acidity': 'fixed_acidity'}, inplace=True)

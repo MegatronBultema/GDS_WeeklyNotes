@@ -1,0 +1,8 @@
+Code to get ours to function correctly. Pandas plotting is built on top of matplotlib, so we have to import it.
+  import matplotlib.pyplot as plt
+
+This just tells the IPython notebook to plot it inline (i.e. in the browser).
+  %matplotlib inline
+
+This will change the style that matplotlib uses (i.e. makes the plots look nicer than the default)
+  plt.style.use('ggplot')

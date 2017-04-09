@@ -31,6 +31,8 @@ write tests before you write code, Red Green Green
 Explain your problem to a rubber duck . . . or friend
 
 What is the difference between a class and an object?
+class = blueprint
+object=instance
 • What are the three key components of OOP? How do they
 lead to better code?
    encapsulation - protects emplimentation, takes away details you don't need to know
@@ -47,6 +49,10 @@ mean?
     Test driven development - software development standards
    forces you to think before you code, check if it is working correctly
    just because it runs and doesnt give errors doesn't mean it is working correctly
+
+
+Decorator
+A decorator is a function which wraps another function:
 
 
 Unfinished:
