@@ -19,3 +19,9 @@
 [submodule "week_1/day5-plotting/-f"]
 	path = week_1/day5-plotting/-f
 	url = https://github.com/MegatronBultema/pandas-seaborn.git
+[submodule "week2/assessment-2"]
+	path = week2/assessment-2
+	url = https://github.com/MegatronBultema/assessment-2.git
+[submodule "week2/probability/probability"]
+	path = week2/probability/probability
+	url = https://github.com/MegatronBultema/probability.git

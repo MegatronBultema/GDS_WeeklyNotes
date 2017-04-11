@@ -1,0 +1,69 @@
+Lecture
+
+Symbol	Meaning
+∨ 	or
+∧ 	and (but not both, in python)
+¬ 	not
+⟹ 	implies (if-then)
+⟺ 	if and only if
+| 	such that
+∀ 	for all
+∴ 	therefore
+
+Symbol	Meaning
+∈ 	in
+∩ 	intersection
+∪ 	union
+∅ 	the empty set
+
+Operation	Definition
+Union	 A∪B={x | x∈A∨x∈B}A∪B={x | x∈A∨x∈B}
+Intersection	 A∩B={x | x∈A∧x∈B}A∩B={x | x∈A∧x∈B}
+Difference	 A∖B={x | x∈A∧x∉B}A∖B={x | x∈A∧x∉B}
+Complement(everything not in A)	 AC={x | x∉A}AC={x | x∉A}
+Disjoint	 A∩B=∅A∩B=∅
+Partition  {Ai}  (of S)	 ∀i,j:Ai∩Aj=∅∀i,j:Ai∩Aj=∅
+S=⋃i=lNAiS=⋃i=lNAi
+
+Random Variable
+  an outcome
+  within a specified sample space
+  value is determined by a PDF
+  X - values it can take
+  x - value it actually took
+  P(X=x)
+
+Permutations - order matters
+Combinations - order doesn't matter
+always more permutations than combinations
+
+
+
+
+
+
+Probability Notes
+
+Cumulative distribution functions
+  a function whose value is the probability that a corresponding continuous random variable has a value less than or equal to the argument of the function.
+  https://static1.squarespace.com/static/54e50c15e4b058fc6806d068/t/551f92cce4b0c19f893cee2a/1462580455468/estimating-the-median
+
+Probability mass function - discrete random variable
+  In probability theory and statistics, a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value.
+
+Probability density functions
+  a function of a continuous random variable, whose integral across an interval gives the probability that the value of the variable lies within the same interval.
+  PDF is associated with continuous rather than discrete random variables; the values of the PDF are not probabilities as such: a pdf must be integrated over an interval to yield a probability.
+
+Expected value
+  In more concrete terms, the expectation is what you would expect the outcome of an experiment to be on average. The expected value (or mean) of X, where X is a discrete random variable, is a weighted average of the possible values that X can take, each value being weighted according to the probability of that event occurring. So the expected value is the sum of: [(each of the possible outcomes) × (the probability of the outcome occurring)].
+
+Variance
+  The variance of a random variable tells us something about the spread of the possible values of the variable. For a discrete random variable X, the variance of X is written as Var(X).
+    Var(X) = E[ (X – m)2 ]
+
+Standard Deviation
+  The standard deviation of X is the square root of Var(X).
+
+Sample Space
+  list of all possible outcomes
