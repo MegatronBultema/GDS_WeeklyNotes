@@ -25,3 +25,6 @@
 [submodule "week2/probability/probability"]
 	path = week2/probability/probability
 	url = https://github.com/MegatronBultema/probability.git
+[submodule "week2/day2_EstimatingDistribution/estimation-sampling"]
+	path = week2/day2_EstimatingDistribution/estimation-sampling
+	url = https://github.com/MegatronBultema/estimation-sampling.git
