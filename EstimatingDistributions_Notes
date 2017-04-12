@@ -1,0 +1,16 @@
+
+MOM - distribution parameters
+variance - tells us the spread
+review distributions
+
+exp. value per time - possion
+  get lambda  (average)
+  plot using scipy to plot
+
+Maximum Likelihood - used more often for real data
+  hypothesis with greatest
+
+
+expectation maximization - generalize to multiple distriputions applied to one data set
+
+choose a parametric approach and judge your theta on chi squared test

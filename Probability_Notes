@@ -64,6 +64,13 @@ Variance
 
 Standard Deviation
   The standard deviation of X is the square root of Var(X).
+  Why might the standard deviation be more useful than variance when talking about data?
+      Because it is in the same units as your mean.
 
 Sample Space
   list of all possible outcomes
+
+
+Descrete vs Continious
+
+support = total possible values
