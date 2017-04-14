@@ -1,0 +1,11 @@
+library(pwr)
+x <- read.csv('dfmtcars2_pd.csv')
+attach(x)
+print(names(x))
+print(mean(x$hp))
+plot(x$mpg ~ x$hp_class, data=x)
+a=aov(x$mpg ~ x$hp_class, data=x)
+summary(a)
+pwr.anova.test(k=2, f=0.4, sig.level=0.05, n=15)
+
+pwr.anova.test(k=2, f=0.4, sig.level=0.05, n=15)

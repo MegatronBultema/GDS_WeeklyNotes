@@ -28,3 +28,9 @@
 [submodule "week2/day2_EstimatingDistribution/estimation-sampling"]
 	path = week2/day2_EstimatingDistribution/estimation-sampling
 	url = https://github.com/MegatronBultema/estimation-sampling.git
+[submodule "week2/day3_HypTesting/ab-testing"]
+	path = week2/day3_HypTesting/ab-testing
+	url = https://github.com/MegatronBultema/ab-testing.git
+[submodule "week2/day4_BayesR/power-bayesian"]
+	path = week2/day4_BayesR/power-bayesian
+	url = https://github.com/zipfian/power-bayesian.git
