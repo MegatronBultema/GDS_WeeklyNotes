@@ -14,3 +14,18 @@ Maximum Likelihood - used more often for real data
 expectation maximization - generalize to multiple distriputions applied to one data set
 
 choose a parametric approach and judge your theta on chi squared test
+
+
+underlying distribution
+  n=10 take 10 people and caluculate the mean
+  repeat 1000 times
+    doesn't really look normal
+
+    n=200 take 200 people and caluculate the mean
+    repeat 1000 times
+      will look like a normal deistribution even if underlying distribution
+          is very much not normal
+
+
+    s = sample standard deviation
+    
