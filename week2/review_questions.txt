@@ -1,0 +1,150 @@
+Review DSI
+Week 0 and Week 1
+
+SQL
+
+* What is an RDBMS?
+	
+
+* What is a schema?
+	summarizes the connections between the tables in a RDBMS
+		possible to have multiple schema in a database
+
+* What does SQL stand for and what is it?
+	SQL Structured Query Language
+	SEQUEL (Structured English Query Language)
+
+* How do you access information stored in SQL databases?
+	By selecting attributes to show from database via a query
+
+* What are the two main parts of a SQL query?
+	Select and from
+* The following questions pertain to specific SQL commands:
+    * How do you constrain the number of records returned by a query?
+	WHERE - CONTENT
+	  LIMIT - FOR NUMBER
+    * How do you sort sort the order of records returned by a query?
+	ORDER BY
+    * How do you group rows together?
+	GROUP BY 
+    * How do you find specific rows in a table...
+        * Before an aggregation?
+		WHERE
+        * After an aggregation?
+		HAVING
+
+* Name 3 types of joins and draw Venn diagram examples of them.
+	OUTER - UNITON
+	INNER - INTERSECTION
+	LEFT (OR RIGHT)
+
+* How might you improve the readability of a large, complicated query?  Think both
+  regarding syntax and the formation of other tables.
+	YOU CAN USE MORE WHITE SPACE
+	YOU CAN USE TEMP TABLES
+
+
+Probability
+
+* What is Bayes rule?  What does it relate?
+	Bayes rule
+		P(Ahpy|Bdata) = P(Bdata|Ahyp)*P(Ahyp)
+			      P(Bdata)
+
+What is the probability of your hypothesis given the data taking your prior knowledge into account.
+
+* What is combinatorics?
+Combinatorics is the mathematics of ordering
+
+* What are permutations?
+There are  P(n,k)  unique ways to arrange  k  of  n  objects into a sequence (where order maters).
+
+* How many ways can I arrange n unique objects?
+	n!
+
+* How many ways can I arrange k of n unique objects, where k < n?  What is this called?
+	Called permutations. 
+	fact(n)/fact(n-k)
+
+
+* If order doesn't matter, how many ways can I pick of n objects? What is this called?
+	Called combinations
+	n!
+
+* What is a random variable?
+	outcome of a random variable, (an answer that may vary)
+
+* How would you define the difference between discrete and continuous distributions?
+	discrete - COUNTABLE - FLIP A COIN
+	continuous - can take on all values 
+
+* What distribution would you use to model the following cases:
+    * What is the probability that the mean volume of 50 bottles is less than 500 ml?
+	normal distribution
+    * Deciding to go for a run or not.
+	binomial - multiple success fail trials
+ 		bernuli - one trial for success or failure for a single instance 
+    * Determining how many days pass before you finally decide to go for a run.
+	geometric
+    * Determining how likely it is that you go for 10 runs in a month.
+	binomial
+    * Calculating how much water falls into an open swimming pool during a rain storm.
+	gamma * add gamma to list
+          (poisson - is discrete, exponential- time until
+    * Assuming you run at a 9 minute mile pace avg pace, determining how likely
+      it is that you pass the 3 mile mark in a race in 25 minutes?
+	exponential - within 25 min
+	poisson - at exactly 25 min
+
+
+
+Estimation-sampling
+
+* What is the central limit theorem?
+	No matter what the underlying distribution is taking a large (<30) number of random samples will generate a normal distribution.
+
+* How would you go about implementing a bootstrap, and why would you do it?
+	take a sample from your population, then randomly choose a value from your sample 
+	with replacement until you have a BS sample the same length as your original 
+	sample
+
+
+
+Hypothesis testing
+
+* What are the general steps of a hypothesis tests?  Make one up (something you'd test)
+  and go through the steps.
+	Want to determine if leaving at 7:15 takes the sam commute time as leaving my house at 6:45
+	Ho - avg. commute(7:45) != avg. commute(6:45)
+	Ha -  avg. commute(7:45) = avg. commute(6:45)
+
+* What is a p value?
+	the p value is the likelihood that I would get my data (mean, stddev) given the null hypothesis
+
+* What is a type I error?
+	type one error is rejecting the null hypothesis when you shouldn’t
+
+* What is a type II error?
+	type two error is failing to reject the null hypothesis when you should 
+
+
+Power
+
+* What are the four factors that influece power?
+	n - size of samples
+	k - number of samples
+	f - degree of difference that you are testing for, effect size
+	var - variance
+
+* In Bayes rule, what are the posterior, the likelihood, and the prior distributions?
+  How are they related?
+	posterior is the probability that you come away with after taking the prior into account
+	lieklihood the probability of getting your data given the hypothesis
+	prior is the probability of the hypothesis being true
+	
+
+posterior = likelihood * prior (/normalizing factor) 
+	normalizing factor - ….
+
+Which A/B testing framework relies on significance testing? frequentistWhat about the other framework what does it use to guide decisions? bayesian, probabilities
+

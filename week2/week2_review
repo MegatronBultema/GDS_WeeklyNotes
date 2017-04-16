@@ -1,0 +1,28 @@
+MOM
+  pick a distribution
+  compute relevant moment
+  plug moments into:
+      pmf: gives the probability of observing a given instance
+      pdf: gives distribution plot of probability
+
+
+MLE
+  probability of the data given the distribution
+
+MAP
+  MLE using bayes
+
+
+Central Limit Theorem
+No matter what the underlying distribution is taking a large (<30) number of random samples
+will generate a normal distirbution.
+
+If the underlying distribution has a mean_pop and stddev_pop, the
+sample will have a mean_s = mean_pop the stddev_s can be measured from the sample
+
+SEM (standard error of the mean)
+      SEM = (stddev_pop/sqrt(# samples)) BUT! we don't know the stddev_pop so we plug in our
+            stddev_s and use this to get our confidence interval
+
+
+1.96 - is the z value for 95% confidence level

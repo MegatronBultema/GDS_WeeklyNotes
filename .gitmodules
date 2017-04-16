@@ -34,3 +34,6 @@
 [submodule "week2/day4_BayesR/power-bayesian"]
 	path = week2/day4_BayesR/power-bayesian
 	url = https://github.com/zipfian/power-bayesian.git
+[submodule "week2/day5/multi-armed-bandit"]
+	path = week2/day5/multi-armed-bandit
+	url = https://github.com/zipfian/multi-armed-bandit.git
