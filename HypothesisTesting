@@ -1,0 +1,39 @@
+1.  Determine the null hypothesis and the alternative hypothesis.
+2.  Collect and summarize the data into a test statistic.
+3.  Use the test statistic to determine the p-value.
+      http://www.socscistatistics.com/pvalues/normaldistribution.aspx
+4.  The result is statistically significant if the p-value is less than or
+    equal to the level of significance.
+
+
+Step 1. Determine the null and alternative hypotheses.
+
+Null hypothesis: No difference in average fat lost in population for two methods. Population mean difference is zero.
+
+Alternative hypothesis: There is a difference in average fat lost in population for two methods. Population mean difference is not zero.
+
+Step 2. Collect and summarize data into a test statistic.
+Diet Only:
+sample mean = 5.9 kg
+sample standard deviation = 4.1 kg sample size = n = 42
+standard error = SEM1 = 4.1/ √42 = 0.633
+
+Exercise Only:
+sample mean = 4.1 kg
+sample standard deviation = 3.7 kg sample size = n = 47
+standard error = SEM2 = 3.7/ √47 = 0.540
+measure of variability = [(0.633)**2 + (0.540)**2] = 0.83
+
+The sample mean difference = 5.9 – 4.1 = 1.8 kg and the standard error of the difference (measure of variability) is 0.83.
+
+So the test statistic: z = (1.8 – 0)/ 0.83 = 2.17
+
+Now look up z-score in table:
+  http://www.socscistatistics.com/pvalues/normaldistribution.aspx
+table tells you the probability up till that z (0.985)
+so to determine the p value of being significantly different take
+1-z = 1-0.985 = 0.015
+because this is a two tailed test we want our p-value to be
+2*(1-z) = 0.03
+because our alpha at 95% confidence is above the p-value we can reject the null hypothesis
+   alpha =0.05 p =0.03

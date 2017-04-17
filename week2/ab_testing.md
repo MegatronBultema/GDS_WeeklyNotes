@@ -28,3 +28,8 @@ page we should make the new default based on the results. In your response,
 please describe and justify the analysis you use, the estimated size of the
 differences between groups in terms of registration rate and purchase rate,
 and finally, provide the decision you would recommend and why.
+
+<br>
+My response:
+  Get the mean and the stddev of the registrations and purchases for all three samples
+  compare and test if the means are significantly different

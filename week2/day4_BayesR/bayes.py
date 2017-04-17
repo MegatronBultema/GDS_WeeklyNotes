@@ -9,7 +9,7 @@ def dice_likelihood(data, num_sides):
 
 def roll_die(sides):
     result = random.randint(1, sides)
-    return result   
+    return result
 
 class Bayes(object):
     '''

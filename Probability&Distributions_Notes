@@ -1,3 +1,7 @@
+SEE THIS RESOURCE FOR MORE HELP!
+probability_arichards.pdf
+
+
 Lecture
 
 Symbol	Meaning
@@ -74,3 +78,53 @@ Sample Space
 Descrete vs Continious
 
 support = total possible values
+
+
+
+Normal distribution
+Bernoulli(p): probability that a single coin flip turns out to be heads
+        PDF - p if x=1, 1-p if x=0
+
+Binomial(n,p,k): (k)number of coin flips out of 100(n) that turn out to be heads where
+                the probability(p) of head occuring is known
+        PDF - choose(n,k) * p**k * (1-p) ** (n-k) for 0<= k <=n
+
+Geometric(p): (k) number of trials until coin flip turns out to be heads
+        PDF - p(1-p) ** (k-1) for k=1,2,...
+
+Poisson(theta or lambda): (k) number of taxis passing a street corner in a given hour (on average pass 10/hour = theta)
+        PDF - e**(-theata) * (theta**k)/k!
+
+Exponential(theta or lambda): Time until taxi will pass street corner
+        PDF - theta*e**(-theta*k) for k>=0 and theta>0
+
+Uniform(a,b): Degrees between hour hand and minute hand
+        PDF - 1/(b-a)
+
+Normal or Gaussian(mu,stddev): normal distribution
+        PDF - 1/(stddev * sqrt(2*pi)) * e**( k - (mu) ** 2/(2 * stddev ** 2)
+
+Gamma:
+The gamma distribution is widely used as a conjugate prior in Bayesian statistics. It is the conjugate prior for the precision (i.e. inverse of the variance) of a normal distribution. It is also the conjugate prior for the exponential distribution.
+
+go to this solution for more on gamma and how to impliment the scipy.gamma
+https://github.com/zipfian/g39ds-soln/blob/master/week2/estimation-sampling/individual_soln.ipynb
+
+
+Examples:
+What distribution would you use to model the following cases:
+* What is the probability that the mean volume of 50 bottles is less than 500 ml?
+	normal distribution
+* Deciding to go for a run or not.
+	binomial - multiple success fail trials
+ 	bernuli - one trial for success or failure for a single instance
+* Determining how many days pass before you finally decide to go for a run.
+	geometric
+* Determining how likely it is that you go for 10 runs in a month.
+	binomial
+* Calculating how much water falls into an open swimming pool during a rain storm.
+	gamma * add gamma to list
+          (poisson - is discrete, exponential- time until)
+* Assuming you run at a 9 minute mile pace avg pace, determining how likely it is that you pass the 3 mile mark in a race in 25 minutes?
+	exponential - within 25 min
+	poisson - at exactly 25 min

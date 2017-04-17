@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as scs
 import matplotlib.pyplot as plt
 '''
-T distribution as fatter tails, allows for the distribution to be more spread and to have more outliers, as number of samples approaches 30 the t distribution with look like /become the normal distribution. 
+T distribution has fatter tails, allows for the distribution to be more spread and to have more outliers, as number of samples approaches 30 the t distribution with look like /become the normal distribution.
 '''
 
 

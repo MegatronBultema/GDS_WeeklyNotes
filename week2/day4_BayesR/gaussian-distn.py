@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 """
 fit a bernoulli distribution with several parameterizations
 """
@@ -19,7 +19,7 @@ splot = 0
 for mu,sig in [(1,5),(0.0,1.0),(5,2)]:
     splot += 1
     ax = fig.add_subplot(1,3,splot)
-    
+
     rv = scs.norm(loc=mu,scale=sig)
     r = scs.norm.rvs(size=1000,loc=mu,scale=sig)
     pdf_range = np.linspace(scs.norm.ppf(0.01),scs.norm.ppf(0.99), 100)
@@ -38,5 +38,5 @@ for mu,sig in [(1,5),(0.0,1.0),(5,2)]:
     for t in ax.get_yticklabels():
         t.set_fontsize(font_size-1)
         t.set_fontname(font_name)
-    
+
 plt.show()
