@@ -1,0 +1,91 @@
+numpy notes
+trying to do things very fast, so sometime will not perform in place
+this allows you to do calculations and not change the underlying table
+just you 2d array not matrix (talk about removing matrix)
+
+>>> np.cumsum(a,axis=0)      # sum over rows for each of the 3 columns
+array([[1, 2, 3],
+       [5, 7, 9]])
+>>> np.cumsum(a,axis=1)      # sum over columns for each of the 2 rows
+array([[ 1,  3,  6],
+       [ 4,  9, 15]])
+
+NumPy command	Note
+a.ndim	                   returns the num. of dimensions
+a.shape	                    returns the num. of rows and colums
+arange(start,stop,step)	      returns a sequence vector
+linspace(start,stop,steps)	 returns a evenly spaced sequence in the specificed interval
+dot(a,b)	                 matrix multiplication
+vstack([a,b])	              stack arrays a and b vertically
+hstack([a,b])	            stack arrays a and b horizontally
+where(a>x)	           returns elements from an array depending on condition
+argsort(a)	           returns the sorted indices of an input array
+
+np.hstack([a,b,c])
+np.vstack([a,b,c])
+
+create a single array for the data (4x4
+>>> geneList = np.array(["A2M", "FOS", "BRCA2","CPOX"])
+>>> values0  = np.array([0.12,0.08,0.06,0.02])
+>>> values1  = np.array([0.01,0.07,0.11,0.09])
+>>> values2  = np.array([0.03,0.04,0.04,0.02])
+>>> values3  = np.array([0.05,0.09,0.11,0.14])
+a=np.vstack([values0,values1,values2,values3])
+
+find the mean expression value per gene
+a.mean(axis=1)
+array([ 0.07  ,  0.07  ,  0.0325,  0.0975])
+
+find the mean expression value per time point
+In [110]: a.mean(axis=0)
+Out[110]: array([ 0.0525,  0.07  ,  0.08  ,  0.0675])
+
+which gene has the maximum mean expression value?
+CPOX
+sort the gene names by the max expression value
+b=np.vstack([geneList,values0,values1,values2,values3])
+
+
+np.where(a<3)
+  returns indices where a is less than 3
+
+b=a
+if you change a will always change b
+
+b=a.copy()
+now if you change a, b will remain a copy
+
+np.isnan() return a mask of where nan are
+
+make a column
+  x = np.array([[3,4,5,6]]).T
+  array([[3],
+       [4],
+       [5],
+       [6]])
+
+make a row
+  xr = np.array([[3,4,5,6]])
+  array([[3, 4, 5, 6]])
+
+  In order to multiply two matrices, they must be conformable such that the number of columns of the first matrix must be the same as the number of rows of the second matrix.
+
+If both x and y are zero-centered, this calculation is the correlation between x and y. cosine similarity - are they pointing in the same way?
+cosine similarity: np.dot(x,y)/(np.linalg.norm(x)*np.linalg.norm(y))
+
+0 - orthoganal
+1 - pointing exactly same way
+-1 - pointing opposite ways
+
+higher deminsional spaces, all distances are far away so cosine sim is useful
+
+
+The distance between two vectors is the norm of the difference.
+np.linalg.norm(x-y)
+if you want the relative distance between two vectors need to use norm
+
+eigen values
+many dimensions don't think they are all independent can use eigen values to give directionality to your vectors without being concerned on how much each contributes to the vector .... k means clustering
+many dimensions, measure of variance along those axis
+
+http://setosa.io/ev/eigenvectors-and-eigenvalues/

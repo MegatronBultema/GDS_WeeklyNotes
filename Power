@@ -1,0 +1,85 @@
+Statistical Power:
+  allows you to determine the number of samples needed to power a given study
+  tells you if you can obtain n samples level of statistical power you will have
+
+  Power is 1 minus the probability that we commit a type 2 error.
+  Where a type 2 error is choosing the null when the alternative is actually true.
+
+  The likelihood that we call something significant when there is something to there to be detected.
+  The things that affect our statistical power are:
+  notes
+      alpha, significance level
+      |μ0−μ1|, degree of difference that you are testing for, effect size
+      standard deviation, or sqrt(var)
+      n, sample size
+
+
+R package uses:
+n - size of samples
+k - number of samples
+f or |μ0−μ1| - degree of difference that you are testing for, effect size
+var - variance or standard deviation**2
+
+questions - R doesn't use alpha ?
+
+  α = Type I Error - Reject H0 when H0 is True (false positive)
+  β = Type II Error - Fail to reject H0 when H0 is False (false negative)
+  1−β = Power - Reject H0 when H0 is False
+
+Calculate the power in python from individual solution (power-bayes/individual_solns.md)
+
+  def calc_power(data, null_mean, ci=0.95):
+     m = data.mean()
+     se = standard_error(data)
+     z1 = scs.norm(null_mean, se).ppf(ci + (1 - ci) / 2)
+     z2 = scs.norm(null_mean, se).ppf((1 - ci) / 2)
+     return 1 - scs.norm(data.mean(), se).cdf(z1) + scs.norm(data.mean(), se).cdf(z2)
+
+  Power, in this context, is the probability of detecting a correct rejection of
+     the null hypothesis (Ho) given that the null hypothesis is indeed false.
+
+  If the above function returns a power of 0.30 then you have a 30% probability
+     of choosing the alternative hypothesis correctly if the null hypothesis is truly false
+
+Factors that effect power:
+EFFECTIVE SIZE increases --> POWER increases
+  Power increased. Changing the null hypothesis here to 20.2 ounces increases the
+  effect size (difference detected in null hypothesis), which increases our ability to detect a shift and thus our power. Specifically, we now have a power of 96.6%.
+
+SAMPLE SIZE increase -> POWER increase
+STANDARD DEVIATION (or VARIANCE) decreases --> POWER increases
+    Standard error decreases as the sample size increases because with a larger and
+    larger sample, we're better able to judge where the true population mean is 'hiding'.
+    From a mathematical perspective, sem = std/sqrt(n) and as n increases,
+    the denominator increases.
+
+    This means that the rejection interval (and confidence interval) gets smaller.
+    This increases the power of the test, because with the better resolution of the
+    intervals comes the ability to detect smaller shifts in the factor of interest.
+
+ALPHA increases --> POWER increases
+    As we increase our significance level, the power also increases. If we
+    want to reduce the Type I error rate (false positives), we will see an
+    increase in the Type II error rate.
+
+    if you increase alpha (0.05 -> 0.1, 95% to 90%), we are allowing for more Type I errors.  We are
+    providing a decision boundary with greater area in the alternative
+    space, which in turn provides the pros of higher power along with
+    the potential cons of more Type I errors.
+
+
+Null distribution
+CTR - trying to see a CTR increase of 0.1%
+  # Set X as a random variable which is the (new conversion - old conversion)
+  X ~ p_new - p_old
+
+H0: pi_new - pi_old = 0.001
+H1: pi_new - pi_old > 0.001
+
+    null = scs.norm(loc=0.001,scale=se)
+    alphahighval = null.ppf(0.975)
+    beta = sample.cdf(alphahighval)
+    print "Power is: ",1-beta
+    #Power is: 0.002086424002
+
+The one-way analysis of variance (ANOVA) is used to determine whether there are any statistically significant differences between the means of two or more independent (unrelated) groups (although you tend to only see it used when there are a minimum of three, rather than two groups).

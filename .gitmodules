@@ -37,3 +37,9 @@
 [submodule "week2/day5/multi-armed-bandit"]
 	path = week2/day5/multi-armed-bandit
 	url = https://github.com/zipfian/multi-armed-bandit.git
+[submodule "week2/day5_Bayes/multi-armed-bandit"]
+	path = week2/day5_Bayes/multi-armed-bandit
+	url = https://github.com/MegatronBultema/multi-armed-bandit.git
+[submodule "week3/day1_linearalg/linear-algebra-eda"]
+	path = week3/day1_linearalg/linear-algebra-eda
+	url = https://github.com/MegatronBultema/linear-algebra-eda.git

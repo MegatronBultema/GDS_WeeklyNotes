@@ -103,3 +103,8 @@ Data clean up
   renaming a column name
     # Rename an individual column in the original data frame.
     df.rename(columns={'fixed acidity': 'fixed_acidity'}, inplace=True)
+
+
+regular expressions - really good for cleaning data
+import re
+x = re.findall("\d+\.?\d*","$100.1")

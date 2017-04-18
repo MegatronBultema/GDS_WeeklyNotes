@@ -6,3 +6,5 @@ This just tells the IPython notebook to plot it inline (i.e. in the browser).
 
 This will change the style that matplotlib uses (i.e. makes the plots look nicer than the default)
   plt.style.use('ggplot')
+
+  https://www.labri.fr/perso/nrougier/teaching/matplotlib/

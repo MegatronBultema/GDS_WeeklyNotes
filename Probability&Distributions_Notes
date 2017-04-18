@@ -88,12 +88,15 @@ Bernoulli(p): probability that a single coin flip turns out to be heads
 Binomial(n,p,k): (k)number of coin flips out of 100(n) that turn out to be heads where
                 the probability(p) of head occuring is known
         PDF - choose(n,k) * p**k * (1-p) ** (n-k) for 0<= k <=n
+        scipy.stats.binom.cdf(x=45, n=100, p=0.52)
+          probability of getting 45 heads out of 100 when the previous 100 flips resulted in 52 heads
 
 Geometric(p): (k) number of trials until coin flip turns out to be heads
         PDF - p(1-p) ** (k-1) for k=1,2,...
 
 Poisson(theta or lambda): (k) number of taxis passing a street corner in a given hour (on average pass 10/hour = theta)
         PDF - e**(-theata) * (theta**k)/k!
+        scipy.stats.poisson.pmf(0, lmda) - probability of getting 0 given lambda
 
 Exponential(theta or lambda): Time until taxi will pass street corner
         PDF - theta*e**(-theta*k) for k>=0 and theta>0
