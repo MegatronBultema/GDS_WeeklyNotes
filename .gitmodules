@@ -43,3 +43,6 @@
 [submodule "week3/day1_linearalg/linear-algebra-eda"]
 	path = week3/day1_linearalg/linear-algebra-eda
 	url = https://github.com/MegatronBultema/linear-algebra-eda.git
+[submodule "week3/day2_linearreg/linear-regression"]
+	path = week3/day2_linearreg/linear-regression
+	url = https://github.com/MegatronBultema/linear-regression.git

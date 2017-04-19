@@ -1,0 +1,23 @@
+Know assumptions
+how to test if they are true
+what to do if not
+
+Positives of LinReg
+plot residuals
+
+categorical - beware of interpreation of variables
+
+indicators for every state or every school
+test scores across schools
+don't use categorical variables
+
+multilevel modeling ... have to use pymc
+random effects modeling
+
+
+anova - generalized linear model..?
+
+MAE - the mean of the absolute value of the errors
+MSE - the mean of the squared errors
+
+MAE is the average error and MSE accounts for larger errors.  RMSE or the sqrt(MSE) can be interpreted in y units

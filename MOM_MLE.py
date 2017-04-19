@@ -80,7 +80,7 @@ class methond_of_moments(object):
         self.df = df
         self.col = col
         self.samp_mean, self.samp_var = get_sample_mean_var(self.df, self.col)
-        self.()
+        #self.()
         #self._fit_normal()
 
     def _fit_gamma(self):
@@ -401,7 +401,7 @@ class maximum_likelihood_estimation(object):
         """
 
         if ax is None:
-            print 'sup'
+            print('sup')
             ax = plot_hist_basic(self.df, self.col)
 
         x_vals = np.linspace(self.df[self.col].min(), self.df[self.col].max())
