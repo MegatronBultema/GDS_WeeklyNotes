@@ -49,3 +49,6 @@
 [submodule "week3/day3_crossvalidation/regularized-regression"]
 	path = week3/day3_crossvalidation/regularized-regression
 	url = https://github.com/MegatronBultema/regularized-regression.git
+[submodule "assessment-3"]
+	path = assessment-3
+	url = https://github.com/MegatronBultema/assessment-3.git
