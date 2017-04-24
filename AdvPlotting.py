@@ -6,7 +6,7 @@ Use this instead:
 
     plotly.offline.plot()
 
-pull out all go. because we imported all the models
+pull out all (go.) because we imported all the models
 '''
 
 
