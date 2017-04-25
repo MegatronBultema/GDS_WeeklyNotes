@@ -52,3 +52,6 @@
 [submodule "assessment-3"]
 	path = assessment-3
 	url = https://github.com/MegatronBultema/assessment-3.git
+[submodule "week4/gradient_descent/gradient-descent"]
+	path = week4/gradient_descent/gradient-descent
+	url = https://github.com/MegatronBultema/gradient-descent.git

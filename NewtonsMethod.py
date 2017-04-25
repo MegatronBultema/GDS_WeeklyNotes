@@ -12,6 +12,8 @@
    Okay so need to find the partial deriviative'''
 from sympy import *
 import matplotlib.pyplot as plt
+import numpy as np
+
 
 '''In [2]: x, y, z = symbols('x y z')
 In [5]: diff(x**2+2*x)
@@ -21,7 +23,7 @@ In [6]: diff(2*x + 2)
 Out[6]: 2'''
 
 def f(x):
-    return x**2 + 2x
+    return x**2 + 2*x
 
 def df(x):
     return 2*x + 2
@@ -29,8 +31,10 @@ def df(x):
 def ddf(x):
     return 2
 
-F = [f, df, ddf]
-F_names = ["$f$", "$f'$", "$f''$"]
+#F = [f, df, ddf]
+#F_names = ["$f$", "$f'$", "$f''$"]
+F = [f, df]
+F_names = ["$f$", "$f'$"]
 
 fig, axs = plt.subplots(3, figsize=(14, 8))
 
@@ -41,19 +45,22 @@ for i, (ax, function) in enumerate(zip(axs, F)):
 
 fig.tight_layout()
 
-'''
-Q: Using Newton's Method for optimization, write a function that returns one of the local minimas of the quartic function $f(x) = x^4 + 2x^3 - 5x^2 - 8$.
-   As stated in the description, to use Newton's method we conceptualize the problem finding zeros of the derivative. This requires us competing the derivative and the second derivative.
+def newtons_method_one_dim(f, df, x0, tol=0.01, max_iter=100):
+    """Approximate a zero of the one dimensional function f
+    using Newton's method.
+    """
+    x_current = x0
+    f_current = f(x_current)
+    df_current = df(x_current)
+    for i in xrange(max_iter):
+        if abs(f_current) <= tol:
+            return x_current, f_current
+        x_current = x_current - (f_current/df_current)
+        f_current = f(x_current)
+        df_current = df(x_current)
+    print("Max iterations reached.  Returning current position.")
+    return x_current, f_current
 
-def f(x):
-    return x**4 + 2 * x**3 - 5 * x**2 - 8
-
-def df(x):
-    return 4 * x**3 + 6 * x**2 - 10 * x
-
-def ddf(x):
-    return 12 * x**2 + 12 * x - 10
-
-F = [f, df, ddf]
-F_names = ["$f$", "$f'$", "$f''$"]
-'''
+minimum = newtons_method_one_dim(df, ddf, -3.0)
+minimum = (-1.0, 0.0)
+# this matches my answer by plotting minimum is -1
