@@ -55,3 +55,9 @@
 [submodule "week4/gradient_descent/gradient-descent"]
 	path = week4/gradient_descent/gradient-descent
 	url = https://github.com/MegatronBultema/gradient-descent.git
+[submodule "week4/decisiontrees_KNN/non-parametric-learners"]
+	path = week4/decisiontrees_KNN/non-parametric-learners
+	url = https://github.com/MegatronBultema/non-parametric-learners.git
+[submodule "week4/randomforest_bagging/random-forest"]
+	path = week4/randomforest_bagging/random-forest
+	url = https://github.com/MegatronBultema/random-forest.git
