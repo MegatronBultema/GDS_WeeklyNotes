@@ -1,0 +1,19 @@
+data following
+Data clean up
+  removing spaces from column names
+    df2 = df.copy()
+    cols = df2.columns.tolist()
+    cols = [col.replace(' ', '_') for col in cols]
+    df2.columns = cols
+    df2.head()
+
+  renaming a column name
+    # Rename an individual column in the original data frame.
+    df.rename(columns={'fixed acidity': 'fixed_acidity'}, inplace=True)
+
+
+regular expressions - really good for cleaning data
+import re
+x = re.findall("\d+\.?\d*","$100.1")
+
+df['column name']= pd.get_dummies()
