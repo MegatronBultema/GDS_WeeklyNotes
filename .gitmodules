@@ -61,3 +61,9 @@
 [submodule "week4/randomforest_bagging/random-forest"]
 	path = week4/randomforest_bagging/random-forest
 	url = https://github.com/MegatronBultema/random-forest.git
+[submodule "week4/SVM/svm"]
+	path = week4/SVM/svm
+	url = https://github.com/MegatronBultema/svm.git
+[submodule "week5/boosting"]
+	path = week5/boosting
+	url = https://github.com/MegatronBultema/boosting.git
