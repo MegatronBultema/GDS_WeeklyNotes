@@ -8,7 +8,8 @@ psycopg2
 5 steps in psycopg2
 1. Open a connection
 2. Create a cursor object
-3. Use the cursor to execute SQL queries 4. Commit SQL actions
+3. Use the cursor to execute SQL queries
+4. Commit SQL actions
 5. Close the cursor and connection
 
 There are a number of ways to grab results from the cursor:

@@ -2,7 +2,7 @@ Write a query to calculate each of the following metrics:
 
 * accuracy: (TP + TN)/(P + N)
 * precision: TP/(TP + FP)
-* recall (aka sensitivity): TP/(TP + FN)
+* recall (aka sensitivity): TP/(TP + FN) or TP/#positive in y_test
 * specificity: TN/(TN + FP)
 
 Table:
