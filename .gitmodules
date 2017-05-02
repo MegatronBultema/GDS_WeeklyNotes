@@ -67,3 +67,6 @@
 [submodule "week5/boosting"]
 	path = week5/boosting
 	url = https://github.com/MegatronBultema/boosting.git
+[submodule "assessment-4"]
+	path = assessment-4
+	url = https://github.com/MegatronBultema/assessment-4.git
