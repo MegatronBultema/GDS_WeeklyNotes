@@ -73,3 +73,6 @@
 [submodule "week5/MongoFolder/web-scraping"]
 	path = week5/MongoFolder/web-scraping
 	url = https://github.com/MegatronBultema/web-scraping.git
+[submodule "week5/NeuralNets!/mlp_cnn_rnn"]
+	path = week5/NeuralNets!/mlp_cnn_rnn
+	url = https://github.com/MegatronBultema/mlp_cnn_rnn.git
