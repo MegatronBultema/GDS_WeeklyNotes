@@ -28,9 +28,10 @@ for i in soup.find_all(class_="lvpic pic img left"):
     images.append(i.img['src'])
 
 for num, i in enumerate(images):
-    a = i.strip('./')
-    obj = urllib.urlopen('{0}{1}'.format('file:///Users/DataScience/Documents/GDS_WeeklyNotes/week5/MongoFolder/web-scraping/data/',a))
+    a = i.strip('./ebay_shoes_files/')
+    b=i.strip('./')
+    obj = urllib.urlopen('{0}{1}'.format('file:///Users/DataScience/Documents/GDS_WeeklyNotes/week5/MongoFolder/web-scraping/data/',b))
 
-    #touch 'data/{0}'.format(a)
-    filename =  open('/Users/DataScience/Documents/GDS_WeeklyNotes/week5/MongoFolder/web-scraping/test/{}'.format(a), 'wb')
-    filename.write(obj.read())
+
+    with open(obj, 'wb') as f:
+        f.write('/test/{}'.format(a))
