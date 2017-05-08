@@ -76,3 +76,9 @@
 [submodule "week5/NeuralNets!/mlp_cnn_rnn"]
 	path = week5/NeuralNets!/mlp_cnn_rnn
 	url = https://github.com/MegatronBultema/mlp_cnn_rnn.git
+[submodule "week5/NaturalLanguageProcessing/nlp"]
+	path = week5/NaturalLanguageProcessing/nlp
+	url = https://github.com/MegatronBultema/nlp.git
+[submodule "week5/Clustering/clustering"]
+	path = week5/Clustering/clustering
+	url = https://github.com/MegatronBultema/clustering.git
