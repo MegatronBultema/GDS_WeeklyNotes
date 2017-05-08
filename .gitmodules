@@ -82,3 +82,6 @@
 [submodule "week5/Clustering/clustering"]
 	path = week5/Clustering/clustering
 	url = https://github.com/MegatronBultema/clustering.git
+[submodule "week6/dimension_reduction/dimensionality-reduction"]
+	path = week6/dimension_reduction/dimensionality-reduction
+	url = https://github.com/MegatronBultema/dimensionality-reduction.git
