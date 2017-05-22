@@ -85,3 +85,21 @@
 [submodule "week6/dimension_reduction/dimensionality-reduction"]
 	path = week6/dimension_reduction/dimensionality-reduction
 	url = https://github.com/MegatronBultema/dimensionality-reduction.git
+[submodule "week6/mapreduce/map-reduce"]
+	path = week6/mapreduce/map-reduce
+	url = https://github.com/MegatronBultema/map-reduce.git
+[submodule "week6/graphs"]
+	path = week6/graphs
+	url = https://github.com/MegatronBultema/graphs.git
+[submodule "week6/spark-install"]
+	path = week6/spark-install
+	url = https://github.com/MegatronBultema/spark-install.git
+[submodule "assessment-5"]
+	path = assessment-5
+	url = https://github.com/MegatronBultema/assessment-5.git
+[submodule "aws_scripts"]
+	path = aws_scripts
+	url = https://github.com/MegatronBultema/aws_scripts.git
+[submodule "week8/high-performance-python"]
+	path = week8/high-performance-python
+	url = https://github.com/MegatronBultema/high-performance-python.git

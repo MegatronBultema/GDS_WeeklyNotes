@@ -1,16 +1,18 @@
 1.  Determine the null hypothesis and the alternative hypothesis.
 2.  Collect and summarize the data into a test statistic.
 
-ttest_1samp(a, popmean[, axis, nan_policy])	Calculates the T-test for the mean of ONE group of scores.
-ttest_ind(a, b[, axis, equal_var, nan_policy])	Calculates the T-test for the means of two independent samples
-ttest_ind_from_stats(mean1, std1, nobs1, ...)	T-test for means of two independent samples from descriptive statistics.
-ttest_rel(a, b[, axis, nan_policy])	Calculates the T-test on TWO RELATED samples of scores, a and b.
-
+ttest_1samp(a, popmean[, axis, nan_policy])	
+		Calculates the T-test for the mean of ONE group of scores.
+ttest_ind(a, b[, axis, equal_var, nan_policy])	
+		Calculates the T-test for the means of two independent samples
+ttest_ind_from_stats(mean1, std1, nobs1, ...)	
+		T-test for means of two independent samples from descriptive statistics.
+ttest_rel(a, b[, axis, nan_policy])	
+		Calculates the T-test on TWO RELATED samples of scores, a and b.
 z_test.py
     z score:
       compare two distributions: z = mean_samp1 - mean_samp2 -delta/SEM1
       normal aprox. of binomial: z = (h-0.5-mu)/sd ; h=sum of successes (or heads), mu = mean, sd = stddev, 0.5=p
-
 
 3.  Use the test statistic to determine the p-value.
     Two sided p-value if Z > 0 ......p_value = 2 * (1-Phi(Z))
@@ -20,18 +22,14 @@ z_test.py
     else if Z is negative ...........p_value = (Phi(Z))
     Phi is the standard notation for the CDF
 
-
       http://www.socscistatistics.com/pvalues/normaldistribution.aspx
       p_value = (2*(1 - st.norm.cdf(z))))
 
 4.  The result is statistically significant if the p-value is less than or
     equal to the level of significance.
 
-
 Step 1. Determine the null and alternative hypotheses.
-
 Null hypothesis: No difference in average fat lost in population for two methods. Population mean difference is zero.
-
 Alternative hypothesis: There is a difference in average fat lost in population for two methods. Population mean difference is not zero.
 
 Step 2. Collect and summarize data into a test statistic.
@@ -39,7 +37,6 @@ Diet Only:
 sample mean = 5.9 kg
 sample standard deviation = 4.1 kg sample size = n = 42
 standard error = SEM1 = 4.1/ √42 = 0.633
-
 Exercise Only:
 sample mean = 4.1 kg
 sample standard deviation = 3.7 kg sample size = n = 47
@@ -53,8 +50,6 @@ So the test statistic: z = (1.8 – 0)/ 0.83 = 2.17
 scipy.stats.ttest_ind_from_stats(mean1, std1, nobs1, mean2, std2, nobs2, equal_var=True)
 scipy.stats.ttest_ind_from_stats(5.9, 4.1, 42, 4.1, 3.7, 47, equal_var=False)
 
-
-
 Now look up z-score in table:
   http://www.socscistatistics.com/pvalues/normaldistribution.aspx
 table tells you the probability up till that z (0.985)
@@ -64,10 +59,8 @@ because this is a two tailed test we want our p-value to be
 2*(1-z) = 0.03
   or 2*(1-scs.norm.cdf(2.17)) = 0.03
 
-because our alpha at 95% confidence is above the p-value we can reject the null hypothesis
+Because our alpha at 95% confidence is above the p-value we can reject the null hypothesis
    alpha =0.05 p =0.03
-
-
 What is the P(90<X<95)P(90<X<95) where mu = 80, sigma = 12?
 a.cdf(95) - a.cdf(90) = 0.096
 
@@ -75,16 +68,11 @@ QUESTION: So we found that Z=2.0
 What is the 2-sided p-value associated with that critical value?
 z table = 0.9772
 p_value 2*(1-0.9772)= 0.0456
-
-  p_value = (2*(1 - st.norm.cdf(z))))
-
+p_value = (2*(1 - st.norm.cdf(z))))
 
 CONFIDENCE INTERVALS
  95% CI : mean +- 1.96(stddev/sqrt(# samples))
-
  scs.norm.ppf(1-0.05/2): z score at 1-alpha/2 (if alpha =0.05, 1-0.05/2 = 0.975)
                         this is allowing for 0.025 probability on either tail
                         so that the total probability density covered in the 95% CI
-                        is 95% with 2.5% probability on either side.
-
-              if one-tailes would be z=scs.norm.ppf(1-0.05)
+                        is 95% with 2.5% probability on either side. if one-tailed would be z=scs.norm.ppf(1-0.05)

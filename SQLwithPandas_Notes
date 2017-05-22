@@ -63,8 +63,8 @@ before you commit the change and that enviroment will think that change has occu
 
 
 Pandas
-inplace=true changes the table
-inplace= defalut false outputs the result but doesn't change the data
+inplace= true changes the table
+inplace= default false outputs the result but doesn't change the data
 
 stay away from .column notation because error if value occurs in atributes
 

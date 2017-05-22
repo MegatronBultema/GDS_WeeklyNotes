@@ -41,6 +41,6 @@ FK uniquely identify PK in other tables
 Check launch that psql is turned on
 
 
- REFERENCES student (id) - gives foriegn key
+ REFERENCES student (id) - gives foreign key
  numeric(3,2) --- 3 numbers 2 decimal
  choice characters over text types

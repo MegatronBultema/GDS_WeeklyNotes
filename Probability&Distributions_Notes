@@ -42,12 +42,7 @@ Combinations - order doesn't matter
 always more permutations than combinations
 
 
-
-
-
-
 Probability Notes
-
 Cumulative distribution functions
   a function whose value is the probability that a corresponding continuous random variable has a value less than or equal to the argument of the function.
   https://static1.squarespace.com/static/54e50c15e4b058fc6806d068/t/551f92cce4b0c19f893cee2a/1462580455468/estimating-the-median
@@ -78,8 +73,6 @@ Sample Space
 Descrete vs Continious
 
 support = total possible values
-
-
 
 Normal distribution
 Bernoulli(p): probability that a single coin flip turns out to be heads
