@@ -103,3 +103,9 @@
 [submodule "week8/high-performance-python"]
 	path = week8/high-performance-python
 	url = https://github.com/MegatronBultema/high-performance-python.git
+[submodule "week8/spark-materials/spark"]
+	path = week8/spark-materials/spark
+	url = https://github.com/MegatronBultema/spark.git
+[submodule "week8/spark-aws"]
+	path = week8/spark-aws
+	url = https://github.com/MegatronBultema/spark-aws.git
