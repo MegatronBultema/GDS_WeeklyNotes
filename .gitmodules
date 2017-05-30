@@ -109,3 +109,6 @@
 [submodule "week8/spark-aws"]
 	path = week8/spark-aws
 	url = https://github.com/MegatronBultema/spark-aws.git
+[submodule "week9/data-products"]
+	path = week9/data-products
+	url = https://github.com/MegatronBultema/data-products.git
